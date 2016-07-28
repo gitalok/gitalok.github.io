@@ -9,15 +9,12 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     
-    <script>
-  	$(function(){
-    	var includes = $('.include');
-    	jQuery.each(includes, function(){
-      	var file = $(this).data('include') + '.html';
-      	$(this).load(file);
-    	});
-  	});
-    </script>
+        <script src="jquery.js"></script>
+        <script>
+            $(function(){
+                $("#includedContent").load("navbar.html");
+            });
+        </script>
   </head>
   
 
@@ -41,11 +38,7 @@
 		<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 		
 		 <footer class="site-footer">
-			This
-			<div align="center">
-				<div class="include" data-include="navbar"></div>
-			</div>
-			
+		<div id="includedContent"></div>
 		</footer>
 	
 	</section>
