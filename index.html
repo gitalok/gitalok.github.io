@@ -10,6 +10,16 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   
+ <script>
+  $(function(){
+    var includes = $('.include');
+    jQuery.each(includes, function(){
+      var file = 'views/' + $(this).data('include') + '.html';
+      $(this).load(file);
+    });
+  });
+ </script>
+  
   <body>
 	<section class="page-header">
       		<h1 class="project-name">Alok Git hub</h1>
@@ -28,7 +38,7 @@
 		<h3><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 		<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 		<footer class="site-footer">
-			<div align="center"> <div data-include="footer.html"></div> </div>
+			<div align="center"> <div class="include" data-include="footer"></div> </div>
 		</footer>
 	</section>
   </body>
