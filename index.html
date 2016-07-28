@@ -8,17 +8,19 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    
+    <script>
+  	$(function(){
+    	var includes = $('.include');
+    	jQuery.each(includes, function(){
+      	var file = $(this).data('include') + '.html';
+      	$(this).load(file);
+    	});
+  	});
+    </script>
   </head>
   
- <script>
-  $(function(){
-    var includes = $('.include');
-    jQuery.each(includes, function(){
-      var file = $(this).data('include') + '.html';
-      $(this).load(file);
-    });
-  });
- </script>
+
   
   <body>
 	<section class="page-header">
@@ -38,10 +40,10 @@
 		<h3><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 		<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
 		
-		 <footer>
+		 <footer class="site-footer">
 			
 			<div align="center">
-				<div data-include="navbar.html"></div>
+				<div class="include" data-include="navbar"></div>
 			</div>
 			
 		</footer>
