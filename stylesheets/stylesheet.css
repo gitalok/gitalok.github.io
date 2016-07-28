@@ -58,8 +58,7 @@ a {
   text-align: center;
   height: 100px
   background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957);
-  margin-bottom:-100px;  }
+  background-image: linear-gradient(120deg, #155799, #159957);  }
   
 
 @media screen and (min-width: 64em) {
